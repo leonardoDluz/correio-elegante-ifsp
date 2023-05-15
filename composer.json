@@ -1,0 +1,10 @@
+{
+    "autoload": {
+        "psr-4": {
+            "Ifsp\\CorreioElegante\\": "src/"
+        }
+    },
+    "require": {
+        "ext-pdo": "*"
+    }
+}
