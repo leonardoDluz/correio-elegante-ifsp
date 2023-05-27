@@ -18,12 +18,14 @@ class MensageRepository
             content,
             name,
             course,
-            grade
+            grade,
+            payment_status
         ) VALUES (
             :content,
             :name,
             :course,
-            :grade
+            :grade,
+            :payment_status
         );';
 
         $statement = $this->connection->prepare($sql);
@@ -31,6 +33,8 @@ class MensageRepository
         $statement->bindValue(':name', $mensage->student->name);
         $statement->bindValue(':course', $mensage->student->course);
         $statement->bindValue(':grade', $mensage->student->grade);
+        $statement->bindValue(':payment_status', $mensage->paymentStatus);
+
 
         $resul = $statement->execute();
         var_dump($resul);
@@ -57,8 +61,17 @@ class MensageRepository
                 $mensageData['course'],
                 $mensageData['grade']
             ),
-            $mensageData['content']
+            $mensageData['content'],
+            $mensageData['paid']
         );
         return $mensage;
+    }
+
+    public function GetLastId(): int
+    {
+        $lastId = $this->connection
+            ->query('SELECT MAX(id) as id FROM mensage;')
+            ->fetch();
+        return $lastId['id'];
     }
 }

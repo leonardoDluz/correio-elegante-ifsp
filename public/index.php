@@ -5,6 +5,7 @@ use Ifsp\CorreioElegante\Infrastructure\Persistence\ConnectionCreator;
 use Ifsp\CorreioElegante\Infrastructure\Repository\MensageRepository;
 
 require_once __DIR__ . '/../vendor/autoload.php';
+require_once __DIR__ . '/../config-database.php';
 
 $connection = ConnectionCreator::createConnection();
 $mensageRepository = new MensageRepository($connection);

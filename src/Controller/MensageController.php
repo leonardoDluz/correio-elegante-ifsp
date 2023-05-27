@@ -18,6 +18,7 @@ class MensageController implements Controller
         $name = filter_input(INPUT_POST, 'nome');
         $course = filter_input(INPUT_POST, 'curso');
         $grade = filter_input(INPUT_POST, 'serie');
+        $paid = 'aberto';
 
         if ($content === false || $name === false || $course === false || $grade === false) {
             header('Location: /?sucesso=0');
@@ -31,14 +32,15 @@ class MensageController implements Controller
                     $grade,
                     $course
                 ),
-                $content
+                $content,
+                $paid
             )
         );
 
         if ($sucess === false) {
             header('Location: /?sucesso=0');
-        } else {
-            header('Location: /?sucesso=1');
-        }
+            return;
+        } 
+        header('Location: /pagamento');
     }
 }

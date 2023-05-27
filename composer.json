@@ -5,6 +5,7 @@
         }
     },
     "require": {
-        "ext-pdo": "*"
+        "ext-pdo": "*",
+        "piggly/php-pix": "^2.0"
     }
 }
