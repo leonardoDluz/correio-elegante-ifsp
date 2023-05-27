@@ -17,7 +17,7 @@ CREATE TABLE mensage (
 );
 ```
 
-e crie um arquivo na raiz do projeto chamado: `config-database.php` siga o modelo abaixo pra inicia-lo
+e crie um arquivo na pasta 'config' do projeto chamado: `config-database.php` siga o modelo abaixo pra inicia-lo
 ```php
 <?php
 
@@ -29,3 +29,7 @@ ConnectionCreator::setUser(YOUR_USER);
 ConnectionCreator::setPasswor(YOUR_PASSWORD);
 
 ```
+
+## Rodar o projeto localmente
+
+para rodar o projeto localmente entre na pasta public, abra o terminar e rode o comando `php -S localhost:8080`
