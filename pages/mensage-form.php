@@ -1,4 +1,4 @@
-<?php require_once 'beginning-html.php'; ?>
+<?php require_once __DIR__ . '/../pages/beginning-html.php'; ?>
 
 <form method="post">
     <input type="text" name="nome">
@@ -20,4 +20,4 @@
     <button type="submit">Enviar</button>
 </form>
 
-<?php require_once 'end-html.php'; ?>
+<?php require_once __DIR__ . '/../pages/end-html.php';

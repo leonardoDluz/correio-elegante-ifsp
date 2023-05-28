@@ -14,7 +14,7 @@ class MensageRepository
 
     public function add(Mensage $mensage): bool
     {
-        $sql = 'INSERT INTO mensage (
+        $sql = 'INSERT INTO mensages (
             content,
             name,
             course,
@@ -37,7 +37,6 @@ class MensageRepository
 
 
         $resul = $statement->execute();
-        var_dump($resul);
 
         return $resul;
     }
@@ -45,32 +44,15 @@ class MensageRepository
     public function all(): array
     {
         $mensageList = $this->connection
-            ->query('SELECT * FROM mensage;')
+            ->query('SELECT * FROM mensages;')
             ->fetchAll();
-        return array_map(
-            $this->hydrateMensage(...),
-            $mensageList
-        );
-    }
-
-    private function hydrateMensage(array $mensageData): Mensage
-    {
-        $mensage = new Mensage(
-            new Student(
-                $mensageData['name'],
-                $mensageData['course'],
-                $mensageData['grade']
-            ),
-            $mensageData['content'],
-            $mensageData['paid']
-        );
-        return $mensage;
+        return $mensageList;
     }
 
     public function GetLastId(): int
     {
         $lastId = $this->connection
-            ->query('SELECT MAX(id) as id FROM mensage;')
+            ->query('SELECT MAX(id) as id FROM mensages;')
             ->fetch();
         return $lastId['id'];
     }

@@ -14,6 +14,8 @@ class ConnectionCreator
 
     public static function createConnection(): PDO
     {
+        require_once __DIR__ . '/../../../config/config-database.php';
+
         $connection = new PDO(
             'mysql:host=' . self::$host . ';dbname=' . self::$dbName, 
             self::$user, 
@@ -41,7 +43,7 @@ class ConnectionCreator
         self::$user = $user;
     }
 
-    public static function setPasswor(string $password): void
+    public static function setPassword(string $password): void
     {
         self::$password = $password;
     }
