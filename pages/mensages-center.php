@@ -10,18 +10,26 @@
         <th>conteudo</th>
         <th>status do pagamento</th>
     </tr>
+
     <?php foreach ($mensageList as $mensage) { ?>
-        <tr>
-            <td><?=$mensage['id'];?></td>
-            <td><?=$mensage['name'];?></td>
-            <td><?=$mensage['course'];?></td>
-            <td><?=$mensage['grade'];?></td>
-            <td><?=$mensage['content'];?></td>
-            <td><?=$mensage['payment_status'];?></td>
-            <td><input type="checkbox" name="pago"></td>
-    </tr>
+        
+    <tr class="data-row">
+        <td class="id"><?=$mensage['id'];?></td>
+        <td><?=$mensage['name'];?></td>
+        <td><?=$mensage['course'];?></td>
+        <td><?=$mensage['grade'];?></td>
+        <td><?=$mensage['content'];?></td>
+        <td><?=$mensage['payment_status'];?></td>
+
+        <?php if ($mensage['payment_status'] === 'aberto') { ?>
+            
+        <td class="payment-status"><input type="checkbox" name="payment:<?=$mensage['id'];?>" value="<?= $mensage['id'];?>"></td>
+
         <?php } ?>
+    </tr>
+    <?php } ?>
     </table>
+    <button type="submit">Confirmar Pagamento</button>
 </form>
 
 <?php require_once __DIR__ . '/../pages/end-html.php';

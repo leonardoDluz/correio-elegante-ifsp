@@ -56,4 +56,15 @@ class MensageRepository
             ->fetch();
         return $lastId['id'];
     }
+
+    public function updatePaymentStatus(array $paymentsPaid): void
+    {
+        foreach ($paymentsPaid as $paymentPaid) {
+            $sql = "UPDATE mensages SET payment_status='pago' WHERE `id`=?;";
+    
+            $statement = $this->connection->prepare($sql);
+            $statement->bindValue(1, $paymentPaid);
+            $statement->execute();
+        }
+    }
 }
