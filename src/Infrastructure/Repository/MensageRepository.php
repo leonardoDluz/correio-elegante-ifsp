@@ -19,13 +19,15 @@ class MensageRepository
             name,
             course,
             grade,
-            payment_status
+            payment_status,
+            type
         ) VALUES (
             :content,
             :name,
             :course,
             :grade,
-            :payment_status
+            :payment_status,
+            :type
         );';
 
         $statement = $this->connection->prepare($sql);
@@ -34,6 +36,7 @@ class MensageRepository
         $statement->bindValue(':course', $mensage->student->course);
         $statement->bindValue(':grade', $mensage->student->grade);
         $statement->bindValue(':payment_status', $mensage->paymentStatus);
+        $statement->bindValue(':type', $mensage->type);
 
 
         $resul = $statement->execute();
@@ -44,7 +47,7 @@ class MensageRepository
     public function all(): array
     {
         $mensageList = $this->connection
-            ->query('SELECT * FROM mensages;')
+            ->query('SELECT * FROM mensages ORDER BY id DESC;')
             ->fetchAll();
         return $mensageList;
     }

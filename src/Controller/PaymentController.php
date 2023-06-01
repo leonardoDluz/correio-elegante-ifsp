@@ -18,7 +18,7 @@ class PaymentController implements Controller
         $keyValue = Parser::parsePhone('15996919369');
         $merchantName = 'Leonardo Domingos da Luz';
         $merchantCity = 'SAO PAULO';
-        $amount = 0.01;
+        $amount = $this->getMensageType();
         $description = 'correio elegante';
         $tid = $this->getTid();
     
@@ -40,5 +40,16 @@ class PaymentController implements Controller
     {
         $lastId = $this->mensageRepository->GetLastId();
         return strval($lastId);
+    }
+
+    private function getMensageType(): float
+    {
+        $mensageType = $_SESSION['type'];
+
+        if ($mensageType === 'simples') return 3.00;
+        if ($mensageType === 'com-pirulito') return 3.50;
+        if ($mensageType === 'com-fini') return 4.00;
+        
+        require_once __DIR__ . '/../../pages/expired-payment.php';
     }
 }

@@ -13,7 +13,8 @@ CREATE TABLE mensages (
     name VARCHAR(45) NOT NULL,
     course VARCHAR(6) NOT NULL,
     grade CHAR(1) NOT NULL,
-    payment_status VARCHAR(6) NOT NULL
+    payment_status VARCHAR(6) NOT NULL,
+    type VARCHAR(12) NOT NULL
 );
 
 CREATE TABLE users (

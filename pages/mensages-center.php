@@ -9,6 +9,7 @@
         <th>série</th>
         <th>conteudo</th>
         <th>status do pagamento</th>
+        <th>tipo</th>
     </tr>
 
     <?php foreach ($mensageList as $mensage) { ?>
@@ -20,8 +21,9 @@
         <td><?=$mensage['grade'];?></td>
         <td><?=$mensage['content'];?></td>
         <td><?=$mensage['payment_status'];?></td>
+        <td><?=$mensage['type'];?></td>
 
-        <?php if ($mensage['payment_status'] === 'aberto') { ?>
+        <?php if ($mensage['payment_status'] === 'pendente') { ?>
             
         <td class="payment-status"><input type="checkbox" name="payment:<?=$mensage['id'];?>" value="<?= $mensage['id'];?>"></td>
 
