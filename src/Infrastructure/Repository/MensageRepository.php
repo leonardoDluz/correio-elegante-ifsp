@@ -20,14 +20,18 @@ class MensageRepository
             course,
             grade,
             payment_status,
-            type
+            type,
+            date,
+            hours
         ) VALUES (
             :content,
             :name,
             :course,
             :grade,
             :payment_status,
-            :type
+            :type,
+            :date,
+            :hours
         );';
 
         $statement = $this->connection->prepare($sql);
@@ -37,7 +41,8 @@ class MensageRepository
         $statement->bindValue(':grade', $mensage->student->grade);
         $statement->bindValue(':payment_status', $mensage->paymentStatus);
         $statement->bindValue(':type', $mensage->type);
-
+        $statement->bindValue(':date', $mensage->date->format('Y-m-d'));
+        $statement->bindValue(':hours', $mensage->hours->format('H:i'));
 
         $resul = $statement->execute();
 
@@ -47,7 +52,7 @@ class MensageRepository
     public function all(): array
     {
         $mensageList = $this->connection
-            ->query('SELECT * FROM mensages ORDER BY id DESC;')
+            ->query("SELECT *, DATE_FORMAT (`date`, '%d/%m/%Y ')AS date FROM mensages ORDER BY id DESC;")
             ->fetchAll();
         return $mensageList;
     }
@@ -70,4 +75,5 @@ class MensageRepository
             $statement->execute();
         }
     }
+
 }

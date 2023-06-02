@@ -2,6 +2,7 @@
 
 namespace Ifsp\CorreioElegante\Controller;
 
+use DateTime;
 use Ifsp\CorreioElegante\Infrastructure\Repository\MensageRepository;
 use InvalidArgumentException;
 

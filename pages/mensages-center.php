@@ -1,4 +1,4 @@
-<?php require_once __DIR__ . '/../pages/beginning-html.php'; ?>
+<?php require_once __DIR__ . '/../pages/beginning-html.php';?>
 
 <form method="post">
     <table border="1">
@@ -8,8 +8,10 @@
             <th>curso</th>
         <th>série</th>
         <th>conteudo</th>
-        <th>status do pagamento</th>
         <th>tipo</th>
+        <th>data</th>
+        <th>hora</th>
+        <th>status do pagamento</th>
     </tr>
 
     <?php foreach ($mensageList as $mensage) { ?>
@@ -20,8 +22,10 @@
         <td><?=$mensage['course'];?></td>
         <td><?=$mensage['grade'];?></td>
         <td><?=$mensage['content'];?></td>
-        <td><?=$mensage['payment_status'];?></td>
         <td><?=$mensage['type'];?></td>
+        <td><?=$mensage['date'];?></td>
+        <td><?=$mensage['hours'];?></td>
+        <td><?=$mensage['payment_status'];?></td>
 
         <?php if ($mensage['payment_status'] === 'pendente') { ?>
             
@@ -29,6 +33,7 @@
 
         <?php } ?>
     </tr>
+
     <?php } ?>
     </table>
     <button type="submit">Confirmar Pagamento</button>

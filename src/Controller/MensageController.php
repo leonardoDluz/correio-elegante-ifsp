@@ -2,6 +2,7 @@
 
 namespace Ifsp\CorreioElegante\Controller;
 
+use DateTime;
 use Ifsp\CorreioElegante\Entity\Mensage;
 use Ifsp\CorreioElegante\Entity\Student;
 use Ifsp\CorreioElegante\Infrastructure\Repository\MensageRepository;
@@ -35,7 +36,9 @@ class MensageController implements Controller
                 ),
                 $content,
                 $paid,
-                $type
+                $type,
+                $date = new DateTime('now'),
+                $hours = new DateTime('now')
             )
         );
 

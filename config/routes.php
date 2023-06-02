@@ -2,6 +2,7 @@
 
 return [
     'GET|/' => \Ifsp\CorreioElegante\Controller\HomeController::class,
+    'GET|/menu' => \Ifsp\CorreioElegante\Controller\MenuController::class,
     'GET|/mensagem' => \Ifsp\CorreioElegante\Controller\MensageFormController::class,
     'POST|/mensagem' => \Ifsp\CorreioElegante\Controller\MensageController::class,
     'GET|/pagamento' => \Ifsp\CorreioElegante\Controller\PaymentController::class,
