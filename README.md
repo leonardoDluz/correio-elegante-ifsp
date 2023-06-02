@@ -14,7 +14,9 @@ CREATE TABLE mensages (
     course VARCHAR(6) NOT NULL,
     grade CHAR(1) NOT NULL,
     payment_status VARCHAR(8) NOT NULL,
-    type VARCHAR(12) NOT NULL
+    type VARCHAR(12) NOT NULL,
+    date DATE NOT NULL,
+    hours TIME NOT NULL
 );
 
 CREATE TABLE users (
