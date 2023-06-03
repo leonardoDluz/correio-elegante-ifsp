@@ -1,6 +1,9 @@
 <?php require_once __DIR__ . '/../pages/beginning-html.php'; ?>
 
-<h1>expirou o pagamento irmão</h1>
-<a href="/">voltar para a home</a>
+<main>
+    <h2 class="title">O Pagamento Expirou</h2>
+    
+    <a href="/" class="button">voltar para a home</a>
+</main>
 
 <?php require __DIR__ . '/../pages/end-html.php';
