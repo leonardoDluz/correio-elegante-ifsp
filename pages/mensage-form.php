@@ -3,7 +3,7 @@
     <h2 class="title">Escolha o Destinatário</h2>
 
     <form method="post" class="container mensage-form">
-        <input type="text" name="nome" placeholder="Nome" class="form-input input-name" require>
+        <input type="text" name="nome" placeholder="Nome" class="form-input input-name" required>
         
         <select name="serie" class="form-input input">      
             <option value="1" class="input-option">1º ano</option>
@@ -17,7 +17,7 @@
             <option value="eletro" class="input-option">Eletromecânica</option>
         </select>
 
-        <textarea name="mensagem" cols="30" rows="10" placeholder="Escreva Sua Mensagem..." class="form-input input-textarea" require></textarea>
+        <textarea name="mensagem" cols="30" rows="10" placeholder="Escreva Sua Mensagem..." class="form-input input-textarea" required></textarea>
 
         <button type="submit" class="form-button">Enviar</button>
     </form>

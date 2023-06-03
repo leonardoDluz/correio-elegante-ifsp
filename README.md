@@ -18,17 +18,11 @@ seguir o protótipo do figma
 
 #### tamanhos de fonte:
 
-##### mobile:
 - header: `30px`
 - título: `28px`
 - texto: `18px`
 - botões: `24px`
 
-##### desktop:
-- header: `40px`
-- título: `36px`
-- texto: `24px`
-- botões: `24px`
 ## Back-End
 #### Configurações Composer
 para iniciar o projeto abra o terminal rode um `composer dumpautoload` e em seguida `composer require piggly/php-pix --ignore-platform-reqs` 

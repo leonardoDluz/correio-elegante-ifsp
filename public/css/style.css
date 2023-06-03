@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Ubuntu&display=swap');
+
 * {
     --light-pink: #FCE0DC;
     --pink:#F59CAA;
@@ -8,6 +9,7 @@
     --secondary-font: 'Ubuntu';
     --box-shadow: 0px 10px 20px -10px var(--dark-pink);
     font-family: var(--primary-font);
+    color: var(--dark-pink);
     font-size: 18px;
     box-sizing: border-box;
 }
@@ -29,19 +31,19 @@ body, header, footer, main {
 
 header {
     background-color: var(--pink);
-    height: 12vh;
+    height: 15vh;
     width: 100%;
 }
 
 main {
-    justify-content: space-between;
+    justify-content: space-around;
     min-height: 65vh;
     margin: 8.5vh 0;
 }
 
 footer {
     background-color: var(--dark-pink);
-    height: 15vh;
+    height: 20vh;
     width: 100%;
 }
 
@@ -51,6 +53,11 @@ footer {
     font-size: 30px;
     width: 55vw;
     font-family: var(--primary-font);
+    text-decoration: none;
+}
+
+.header-link {
+    text-decoration: none;
 }
 
 .footer-text, .footer-link {
@@ -61,24 +68,36 @@ footer {
 .title {
     color: var(--dark-pink);
     font-size: 28px;
-    margin-bottom: 5vh;
+    margin-bottom: 1em;
 }
 
 .text {
     color: var(--dark-pink);
     font-family: var(--secondary-font);
     font-size: 18px;
-    width: 80vw;
+    width: 19em;
 }
 
 .button, .container {
     background-color: var(--pink);
-    width: 80vw;
+    width: 19em;
     border-radius: 15px;
     border-bottom: 0.5em solid var(--dark-pink);
     -webkit-box-shadow: var(--box-shadow);
     -moz-box-shadow: var(--box-shadow);;
     box-shadow: var(--box-shadow);;
+}
+
+.container {
+    width: 19em;
+}
+
+.pay-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 50vh;
 }
 
 .button {
@@ -124,6 +143,8 @@ footer {
     margin: 0 auto;
     font-size: 24px;
     position:relative;
+    cursor: pointer;
+    text-decoration: none;
 }
 
 .form-input {
@@ -150,10 +171,63 @@ footer {
     
 }
 
+.input {
+    cursor: pointer;
+}
+
 .input-textarea {
     height: 12vh;
 
 }
+
 .input-textarea::placeholder {
     padding-top: 0.5em;
+}
+
+/* pix */
+
+.pix-qr-code {
+    width: 200px;
+    border-radius: 15px;
+}
+
+#pix-code {
+    display: none;
+}
+
+.copy-button {  
+    display: flex;
+    background-color: var(--light-pink);
+    border: transparent;
+    border-radius: 15px;
+    padding: 0.5em;
+    margin: 0 auto;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.copy-button:active {
+    background-color: var(--dark-pink);
+    color: var(--white);
+}
+
+.copy-button span {
+    margin-left: 0.2em;
+}
+
+/* tabela */
+
+table {
+    margin: 0 5em 1em 5em; 
+}
+
+th {
+    background-color: var(--dark-pink);
+    color: var(--white);
+}
+
+td, th{
+    border: 2px solid var(--dark-pink);
+    padding: 0.5em;
 }
