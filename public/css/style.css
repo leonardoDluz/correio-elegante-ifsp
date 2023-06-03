@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+* {
+    --light-pink: #FCE0DC;
+    --pink:#F59CAA;
+    --dark-pink: #DC4F5F;
+    --white: #f3f3f3;
+    --primary-font: 'Lilita One', sans-serif;
+    --secondary-font: 'Ubuntu';
+    --box-shadow: 0px 10px 20px -10px var(--dark-pink);
+    font-family: var(--primary-font);
+    font-size: 18px;
+    box-sizing: border-box;
+}
+
+/* página principal */
+
+body {
+    background-color: var(--light-pink);
+    font-family: var(--primary-font);
+}
+
+body, header, footer, main {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    flex-direction: column;
+}
+
+header {
+    background-color: var(--pink);
+    height: 12vh;
+    width: 100%;
+}
+
+main {
+    justify-content: space-between;
+    min-height: 65vh;
+    margin: 8.5vh 0;
+}
+
+footer {
+    background-color: var(--dark-pink);
+    height: 15vh;
+    width: 100%;
+}
+
+.header-text {
+    color: var(--white);
+    text-shadow:1px 1px var(--dark-pink);
+    font-size: 30px;
+    width: 55vw;
+    font-family: var(--primary-font);
+}
+
+.footer-text, .footer-link {
+    color: var(--white);
+    font-size: 18px;
+}
+
+.title {
+    color: var(--dark-pink);
+    font-size: 28px;
+    margin-bottom: 5vh;
+}
+
+.text {
+    color: var(--dark-pink);
+    font-family: var(--secondary-font);
+    font-size: 18px;
+    width: 80vw;
+}
+
+.button, .container {
+    background-color: var(--pink);
+    width: 80vw;
+    border-radius: 15px;
+    border-bottom: 0.5em solid var(--dark-pink);
+    -webkit-box-shadow: var(--box-shadow);
+    -moz-box-shadow: var(--box-shadow);;
+    box-shadow: var(--box-shadow);;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    text-shadow: 1px 1px var(--dark-pink);
+    color: var(--white);
+    height: 4em;
+}
+
+
+/* formulário */
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    padding: 2.5em;
+    height: 40vh;
+    justify-content: space-between;
+}
+
+.mensage-form {
+    display: grid;
+    gap: 2em;
+    grid-template-rows: repeat(1fr, 4);
+    grid-template-columns: auto;
+    justify-items: stretch; 
+    align-items: stretch;
+    font-size: 18px;
+    place-content: center;
+    padding: 2.5em 0;
+}
+
+.form-button {
+    background-color: var(--dark-pink);
+    color: var(--white);
+    border: transparent;
+    border-radius: 15px;
+    padding: 0.5em;
+    grid-row: span 2;
+    margin: 0 auto;
+    font-size: 24px;
+    position:relative;
+}
+
+.form-input {
+    height: 3em;
+    background-color: var(--light-pink);
+    color: var(--dark-pink);
+    border-radius: 15px;
+    border: transparent;
+    border-top: 0.5em solid var(--dark-pink);
+    -webkit-box-shadow: inset var(--box-shadow);
+    -moz-box-shadow: inset var(--box-shadow);
+    box-shadow: inset var(--box-shadow);
+}
+
+.input-name, .input-textarea, .mensage-form__button {
+    grid-column: span 2;
+} 
+
+.form-input::placeholder{
+    font-family: var(--primary-font);
+    color: var(--dark-pink);
+    font-size: 18px;
+    padding-left: 0.2em;
+    
+}
+
+.input-textarea {
+    height: 12vh;
+
+}
+.input-textarea::placeholder {
+    padding-top: 0.5em;
+}

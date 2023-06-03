@@ -10,6 +10,25 @@ seguir o protótipo do figma
 - ![#DC4F5F](https://via.placeholder.com/15/DC4F5F/000000?text=+) `#DC4F5F`
 - ![#F59CAA](https://via.placeholder.com/15/F59CAA/000000?text=+) `#F59CAA`
 - ![#FCE0DC](https://via.placeholder.com/15/FCE0DC/000000?text=+) `#FCE0DC`
+
+#### fontes:
+
+- fronte principal: `Lilita One`
+- fonte secundária: `Ubuntu`
+
+#### tamanhos de fonte:
+
+##### mobile:
+- header: `30px`
+- título: `28px`
+- texto: `18px`
+- botões: `24px`
+
+##### desktop:
+- header: `40px`
+- título: `36px`
+- texto: `24px`
+- botões: `24px`
 ## Back-End
 #### Configurações Composer
 para iniciar o projeto abra o terminal rode um `composer dumpautoload` e em seguida `composer require piggly/php-pix --ignore-platform-reqs` 
