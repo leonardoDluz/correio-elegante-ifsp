@@ -27,6 +27,11 @@ class MensageController implements Controller
             return;
         }
 
+        if ($type === false) {
+            header('Location: /menu');
+            return;
+        }
+
         $sucess = $this->mensageRepository->add(
             new Mensage(
                 new Student(
