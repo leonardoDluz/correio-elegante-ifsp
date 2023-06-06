@@ -42,7 +42,7 @@ class MensageRepository
         $statement->bindValue(':payment_status', $mensage->paymentStatus);
         $statement->bindValue(':type', $mensage->type);
         $statement->bindValue(':date', $mensage->date->format('Y-m-d'));
-        $statement->bindValue(':hours', $mensage->hours->format('H:i'));
+        $statement->bindValue(':hours', $mensage->hours->format('H:i:s'));
 
         $resul = $statement->execute();
 
