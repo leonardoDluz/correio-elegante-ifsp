@@ -25,7 +25,7 @@
             <td><?=$mensage['type'];?></td>
             <td><?=$mensage['date'];?></td>
             <td><?=$mensage['hours'];?></td>
-            <td><?=$mensage['payment_status'];?></td>
+            <td class="<?=$mensage['payment_status'] === 'pago' ? 'pago':'';?>"><?=$mensage['payment_status'];?></td>
 
             <?php if ($mensage['payment_status'] === 'pendente') { ?>
                 
