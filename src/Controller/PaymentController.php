@@ -15,8 +15,8 @@ class PaymentController implements Controller
     public function processRequest(): void
     {
         $keyType  = Parser::KEY_TYPE_PHONE;
-        $keyValue = Parser::parsePhone('15996919369');
-        $merchantName = 'Leonardo Domingos da Luz';
+        $keyValue = Parser::parsePhone('15998382760');
+        $merchantName = 'Giovanna Lopes Martins';
         $merchantCity = 'SAO PAULO';
         $amount = $this->getMensageType();
         $description = 'correio elegante';
