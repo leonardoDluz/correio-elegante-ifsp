@@ -17,6 +17,6 @@
     </div>
 </main>
 
-<script src="js/copy-pix-code.js"></script>
+<script src="public/js/copy-pix-code.js"></script>
     
 <?php require_once __DIR__ . '/../pages/end-html.php';
