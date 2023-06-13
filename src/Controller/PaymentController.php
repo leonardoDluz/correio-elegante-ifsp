@@ -30,8 +30,8 @@ class PaymentController implements Controller
                 ->setTid($tid)
                 ->setDescription($description);
 
-        $pixCode = $payload->getPixCode();
-        $qrCode = $payload->getQRCode();
+        $_SESSION['pixCode'] = $payload->getPixCode();
+        $_SESSION['qrCode'] = $payload->getQRCode();
         
         require_once __DIR__ . '/../../pages/payment.php';
     }

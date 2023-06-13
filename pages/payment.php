@@ -1,9 +1,9 @@
 <?php require_once __DIR__ . '/../pages/beginning-html.php'; ?>
 <main>
     <div class="container pay-container">
-        <img class="pix-qr-code" src="<?=$qrCode;?>" alt="QR Code de Pagamento" />
+        <img class="pix-qr-code" src="<?=$_SESSION['qrCode'];?>" alt="QR Code de Pagamento" />
 
-        <span id="pix-code"><?=$pixCode;?></span>
+        <span id="pix-code"><?=$_SESSION['pixCode'];?></span>
 
         <button class="copy-button">
             Copiar Código
