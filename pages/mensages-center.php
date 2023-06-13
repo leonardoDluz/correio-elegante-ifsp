@@ -3,9 +3,9 @@
     <form method="post">
         <table>
             <tr>
-                <th>id</th>
-                <th>nome</th>
-                <th>curso</th>
+            <th>id</th>
+            <th>nome</th>
+            <th>curso</th>
             <th>série</th>
             <th>conteudo</th>
             <th>tipo</th>
