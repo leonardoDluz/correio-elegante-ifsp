@@ -68,6 +68,12 @@ footer {
 .title {
     color: var(--dark-pink);
     font-size: 28px;
+}
+
+.secondary-title {
+    color: var(--dark-pink);
+    font-size: 26px;
+    margin-top: -1em;
     margin-bottom: 1em;
 }
 
@@ -234,4 +240,18 @@ td, th{
 
 .pago {
     color: #379c3c;
+}
+
+.mensage-center-button {
+    position: fixed;
+    bottom: 1em;
+    left: 3.5em;
+    background-color: #379c3c;
+}
+
+@media screen and (max-width: 800px) {
+    .table {
+        max-width: 100vw;
+        overflow-x: scroll;
+    }
 }
